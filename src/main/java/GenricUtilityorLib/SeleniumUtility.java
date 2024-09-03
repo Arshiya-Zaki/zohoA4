@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SeleniumUtility {
 
-	WebDriver driver = null;
+
 	Actions act =null;
 	Select s = null;
 	
@@ -26,7 +26,7 @@ public class SeleniumUtility {
     /*
      * generic method to maximize 
      */
-    public void maximizeWindow()
+    public void maximizeWindow(WebDriver driver)
     {
 	driver.manage().window().maximize();
     }
@@ -217,7 +217,7 @@ public class SeleniumUtility {
      * 
      */
     
-    public void acceptAlert()
+    public void acceptAlert(WebDriver driver)
     {
     driver.switchTo().alert().accept();	
     }
@@ -225,7 +225,7 @@ public class SeleniumUtility {
     /*
      * Generic Method to dismiss alert
      */
-    public void dismissAlert()
+    public void dismissAlert(WebDriver driver)
     {
     driver.switchTo().alert().dismiss();
     }
@@ -233,7 +233,7 @@ public class SeleniumUtility {
     /* this is a generic method to switch frame based on child index
      * 
      */
-    public void switchTochildFrame(int childFrameindex)
+    public void switchTochildFrame(WebDriver driver,int childFrameindex)
     {
     	driver.switchTo().frame(childFrameindex);
     }	 

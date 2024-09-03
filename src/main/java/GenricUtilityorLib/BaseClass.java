@@ -18,7 +18,6 @@ public class BaseClass {
 public static WebDriver driver = null;
 SeleniumUtility SUTIL= null;
  PropertiesUtil PUTIL= new PropertiesUtil();
- 
  @BeforeSuite(alwaysRun= true)
  public void createConnection()throws Exception
  {
@@ -34,7 +33,7 @@ String URL= PUTIL.getDataFromProperties("URL");
 SUTIL = new SeleniumUtility();
 driver = new ChromeDriver();
 SUTIL.implicitWait(driver, 10);
-SUTIL.maximizeWindow();
+SUTIL.maximizeWindow(driver);
 driver.get(URL);
 System.out.println("Launching Successfully");
  }

@@ -9,7 +9,7 @@ public class LeadsHomePage {
    /**
     * this is a POM class for leads page
     */
-	@FindBy(xpath="//img[@title='Create Leead...']")
+	@FindBy(xpath="//img[@title='Create Lead...']")
 	private WebElement createNewLeadButton; 
 	
 	public LeadsHomePage(WebDriver  driver)

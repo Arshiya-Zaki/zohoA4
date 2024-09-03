@@ -6,7 +6,7 @@ import java.util.Properties;
 public class PropertiesUtil {
 public String getDataFromProperties(String Data) throws Exception
 {
-FileInputStream fis = new FileInputStream("C:\\Users\\User\\Desktop\\selenium\\commondata.properties");
+FileInputStream fis = new FileInputStream(Iconstantutility.propertiesPath);
 Properties pobj = new Properties();
  pobj.load(fis);
  String value = pobj.getProperty(Data);
